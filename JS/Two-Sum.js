@@ -9,4 +9,20 @@
 //    return [0, 1].
 // 
 
-
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function (nums, target) {
+    let hashtable = {};
+    for (let index = 0; index < nums.length; index++) {
+        let element = nums[index];
+        let ele = target - element;
+        if(hashtable.hasOwnProperty(ele)){
+            return [hashtable[ele],index]
+        }
+        hashtable[element] = index
+        
+    }
+};

@@ -1,3 +1,3 @@
 # LeetCode
 
-LC中的 C ,Python3 , Ruby ,Go Javascript题目的解法
+LC中的  Python3 , Javascript题目的解法
