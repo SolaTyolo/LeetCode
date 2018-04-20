@@ -75,7 +75,7 @@ class Solution1(object):
 #   
 # Accepted  Runtime: 36 ms
 #
-# 时间复杂度O(n)
+# 时间复杂度O(1)
 ############################################
 
 
