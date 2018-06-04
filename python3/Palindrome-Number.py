@@ -23,7 +23,7 @@
 #   Accepted  Runtime: 308 ms
 # 
 #####################
-# -*- coding: UTF-8 -*-
+
 class Solution:
     def isPalindrome(self, x):
         """
@@ -39,6 +39,34 @@ class Solution:
             x //= 10 
 
         return  new == old
+
+#####################
+#  
+# TIP:
+#   根据左右循环对比        
+# 
+#   Accepted  Runtime: 338 ms
+# 
+#####################
+class Solution1:
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+        if x<0:
+            return False 
+        if x == 0:
+            return True
+        mask = 10 ** int(math.log10(x))
+        
+        while 1:
+            if x//mask != x % 10:
+                return False
+            x %= mask
+            x //= 10
+            mask //= 100
+        return True
 
 # tests
 def main():
